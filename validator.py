@@ -5,3 +5,8 @@ def validate_email(email: str) -> bool:
     pattern = r'^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$'
     return bool(re.match(pattern, email))
 
+def validate_phone(phone:str) -> bool:
+    """Валидация российского номера телефона в формате +7X**********."""
+    import re
+    pattern =  r'^\+7\d{10}$'
+    return bool(re.math(pattern, phone))
